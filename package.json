@@ -19,5 +19,7 @@
     "@wordpress/scripts": "*",
     "normalize.css": "^8.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "text-slider": "^1.0.1"
+  }
 }

@@ -1,4 +1,28 @@
 <?php
+
+function pageBanner($args = NULL) {
+    
+    if (!isset($args['title'])) {
+        $args['title'] = get_the_title();
+    }
+
+    if (!isset($arg['photo'])) {
+        if (get_field('page_banner_background_image') AND !is_archive() AND !is_home()) {
+            $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
+        } else {
+            $args['photo'] = get_theme_file_uri('/images/hero-image.pnp');
+        }
+    }
+
+    ?>
+    <div class="page-banner">
+        <div class="page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>"></div>
+        <div class="page-banner__content container container--narrow">    
+            <H1 class="page-banner__title"><?php echo $args['title'] ?></H1>
+        </div>
+    </div>
+<?php }
+
 function pcu_files() {
 
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
@@ -23,7 +47,10 @@ add_action('wp_enqueue_scripts', 'pcu_files');
 
 
 function pcu_features() {
+    // Bootstarp responsive nav bar
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
     register_nav_menu('headerMenuLocation', 'Header Menu Location');
+
+    add_image_size('pageBanner', 1300, 400, true);
 }
 add_action('after_setup_theme', 'pcu_features');

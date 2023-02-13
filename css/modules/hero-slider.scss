@@ -3,6 +3,7 @@
 
     div {
         outline: none;
+        position: relative;
     }
 
     &__interior {
@@ -26,7 +27,7 @@
         padding: 40px;
         color: #fff;
 
-        
+
         width: 50%;
         // @include stMedium {
         //     width: 50%;
