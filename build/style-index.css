@@ -1,0 +1,191 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+body {
+  background-color: burlywood;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #0D3B66;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 1.65em 0;
+}
+
+p,
+li {
+  line-height: 1.65;
+}
+
+header {
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  z-index: 9999;
+  top: 0;
+  position: fixed;
+}
+
+.site-header__logo {
+  max-width: 15rem;
+  width: 400px;
+  height: 150px;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+.shrink {
+  padding: 20px 0;
+}
+
+.navbar {
+  background-color: transparent;
+  transition: all 1s;
+  padding: 4.5rem 0 0.5rem 0;
+  opacity: 0.9;
+}
+.navbar-nav {
+  background-color: rgba(26, 26, 26, 0.4509803922);
+  list-style: none;
+  position: relative;
+}
+.navbar-nav li a {
+  padding: 0 0.8rem;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.navbar-nav li a:hover {
+  color: #aaa;
+  background-color: transparent;
+}
+.navbar-nav li .dropdown-toggle:hover::after {
+  top: -5px;
+  left: 50%;
+}
+.navbar-nav li dropdown-item:hover::after {
+  top: 40%;
+  left: 95%;
+  background-color: red;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.main-navigation {
+  padding-top: 2px;
+}
+.main-navigation ul {
+  padding: 0;
+  margin: 0;
+}
+.main-navigation ul:before,
+.main-navigation ul:after {
+  content: " ";
+  display: table;
+}
+.main-navigation ul:after {
+  clear: both;
+}
+@media (min-width: 960px) {
+  .main-navigation {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.main-navigation li {
+  list-style: none;
+}
+@media (min-width: 960px) {
+  .main-navigation li {
+    float: left;
+    padding-left: 20px;
+  }
+}
+
+.main-navigation a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+}
+@media (min-width: 960px) {
+  .main-navigation a {
+    display: inline-block;
+    padding: 0;
+  }
+}
+
+.menu-item-has-children a::after {
+  display: inline-block;
+  margin-left: 0.2555em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.sub-menu li a::after {
+  display: none;
+}
+
+.main-navigation .current-menu-item a,
+.main-navigation a:hover {
+  color: #FAF0CA;
+}
+
+.hero-slider {
+  position: relative;
+}
+.hero-slider div {
+  outline: none;
+}
+.hero-slider__interior {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.hero-slider__slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-slider__overlay {
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.68);
+  padding: 40px;
+  color: #fff;
+  width: 50%;
+}
+
+click-dots li {
+  list-style: none;
+  display: inline;
+}
+click-dots li button {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
