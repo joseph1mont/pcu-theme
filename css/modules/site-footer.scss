@@ -1,0 +1,99 @@
+#footer-main {
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    .logo {
+        max-width: 35rem;
+    }
+
+    .details {
+        font-size: 14px;
+        font-size: 1.4rem;
+        margin-top: 30px;
+        margin-top: 3rem;
+        color: #79797E;
+        
+        @include atMedium {
+            margin-left: 90px;
+        }
+
+        .boxcrush_social {
+            // margin-bottom: 3rem;
+
+            a {
+                display: inline-block;
+                height: 30px;
+                height: 3rem;
+                width: 30px;
+                width: 3rem;
+                border-radius: 15px;
+                border-radius: 1.5rem;
+                margin-right: 20px;
+                margin-right: 2rem;
+                box-shadow: 0 1px 3px 0 rgb(0 0 0 / 50%);
+                transition: transform 0.2s ease-in-out;
+                transform-origin: center;
+
+                &:hover {
+                        transform: scale(1.2);
+                }
+            }
+        }
+
+        .content-block.container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        strong {
+            color: #424148;
+        }
+    }
+
+    .nav-sitemap {
+        overflow: hidden;
+        margin-top: 3rem;
+        width: 100%;
+        @include atMedium {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 25rem;        
+        }
+
+        li {
+            list-style-type: none;
+            display: table-cell;
+            border: none;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-item,
+        .menu-item {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+
+            @include atMedium {
+                max-width: 150px;
+            }
+        
+            a {
+                color: #424148;
+                padding-left: 0;
+            }
+
+            .top-level {
+                text-transform: uppercase;
+                transition: all 0.2s ease-in-out;
+                transform-origin: left center;
+            }
+        }
+    }
+
+
+}

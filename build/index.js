@@ -12,6 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
 /* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/HeroSlider */ "./src/modules/HeroSlider.js");
 /* harmony import */ var _modules_NavScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/NavScroll */ "./src/modules/NavScroll.js");
+/* harmony import */ var _modules_Counters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/Counters */ "./src/modules/Counters.js");
 
 
 // modules / classes 
@@ -20,11 +21,46 @@ __webpack_require__.r(__webpack_exports__);
 // import TinySlider from "./modules/TinySlider";
 
 
+
 // instantiate a new object using modules / classes
 // const mobileMenu = new MobileMenu();
 const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_1__["default"]();
 // const tinySlider = new TinySlider();
 const navScroll = new _modules_NavScroll__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const counters = new _modules_Counters__WEBPACK_IMPORTED_MODULE_3__["default"]();
+
+/***/ }),
+
+/***/ "./src/modules/Counters.js":
+/*!*********************************!*\
+  !*** ./src/modules/Counters.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+class Counters {
+  constructor() {
+    jQuery(document).ready(function (e) {
+      e("#left-stat").length && e(window).on("scroll", function () {
+        if (e("#left-stat").isInViewport() && !e("#left-stat").hasClass("animated")) {
+          var n = e("#left-stat").attr("data-value");
+          e("#left-stat").addClass("animated"), o("#left-stat", 0, n, 3e3);
+        }
+        if (e("#middle-stat").isInViewport() && !e("#middle-stat").hasClass("animated")) {
+          var t = e("#middle-stat").attr("data-value");
+          e("#middle-stat").addClass("animated"), o("#middle-stat", 0, t, 3e3);
+        }
+        if (e("#animated-logo").isInViewport() && !e("#animated-logo").hasClass("played")) {
+          e("#animated-logo").addClass("played");
+          var a = document.getElementById("animated-logo");
+          a && a.play();
+        }
+      });
+    });
+  }
+}
+;
+/* harmony default export */ __webpack_exports__["default"] = (Counters);
 
 /***/ }),
 
@@ -63,23 +99,13 @@ class HeroSlider {
 __webpack_require__.r(__webpack_exports__);
 class NavScroll {
   constructor() {
+    alert('ddd');
     window.onscroll = this.scrolled;
   }
   scrolled() {
-    let navbarColor = document.getElementById("header");
-    var ttt = document.querySelector('.site-header__logo');
-    // document.querySelector('.site-header__logo').src = '../../images/hero-image.png'; 
-
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      // navbarColor.style.backgroundColor = "white";
-      navbarColor.style.backgroundColor = "transparent";
-    } else {
-      navbarColor.style.backgroundColor = "transparent";
-      // document.querySelector('.site-header__logo').src = '../../images/pcu-logo-white.svg';
-    }
+    alert('dd');
   }
 }
-
 /* harmony default export */ __webpack_exports__["default"] = (NavScroll);
 
 /***/ }),

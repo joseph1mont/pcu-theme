@@ -1,0 +1,101 @@
+.brand-blocks {
+    padding: 4rem 0;
+
+    @include atSmallMedium {
+        padding: 10rem 0;
+    }
+
+    .brand-card-container {
+        position: relative;
+        z-index: 1;
+        perspective: 1000;
+        min-height: 250px;
+
+        &:hover .brand-card {
+            transform: rotateY(180deg);
+        }
+
+        .brand-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform-style: preserve-3d;
+            transition: all 0.6s linear;
+
+            .face {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .face.back {
+                display: block;
+                transform: rotateY(180deg);
+                color: #fff;
+                text-align: center;
+                padding: 4rem 2rem;
+            }
+
+            .face.back.triptime,
+            .face.back.anytime {
+                background-color: #E86956;
+            }
+        }
+    }
+
+    .blocks { 
+    
+    .block {
+        margin: 2rem 0 0 !important;
+
+        a {
+            display: block;
+            padding: 4.7rem 2.4rem;
+            border: 2px solid #191919;
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 1.8rem;
+            color: #424148;
+
+            img {
+                max-height: 80px;
+                max-width: 200px;
+            }
+
+            p {
+                margin-top: 1rem;
+            }
+
+            &.triptime,
+            &.anytime {
+                border-color: #e86956;
+            }
+
+            &:active,
+            &:link,
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+
+    }
+        .block.back a {
+            font-size: inherit;
+            font-weight: inherit;
+            padding: 0;
+            line-height: inherit;
+            border: none;
+            color: inherit;
+        } 
+
+}
+
+
+}

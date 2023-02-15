@@ -10,7 +10,7 @@ function pageBanner($args = NULL) {
         if (get_field('page_banner_background_image') AND !is_archive() AND !is_home()) {
             $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
         } else {
-            $args['photo'] = get_theme_file_uri('/images/hero-image.pnp');
+            $args['photo'] = get_theme_file_uri('/images/point-comfort-underwriters-indianapolis-indiana.jpg');
         }
     }
 
@@ -25,7 +25,7 @@ function pageBanner($args = NULL) {
 
 function pcu_files() {
 
-    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
     wp_enqueue_style('bootstrap4-style','//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
     wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.12.1/css/all.css');
 
@@ -50,6 +50,9 @@ function pcu_features() {
     // Bootstarp responsive nav bar
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
     register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerMenuLocation1', 'Footer Menu Location1');
+    register_nav_menu('footerMenuLocation2', 'Footer Menu Location2');
+    register_nav_menu('footerMenuLocation3', 'Footer Menu Location3');
 
     add_image_size('pageBanner', 1300, 400, true);
 }

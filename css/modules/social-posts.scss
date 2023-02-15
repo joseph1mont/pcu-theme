@@ -1,0 +1,96 @@
+.social-posts {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    max-height: 66rem;
+
+    @include atSmallMedium {
+        max-height: 36rem;
+    }
+
+    .row {
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+
+        .social-post {
+            max-height: 60rem;
+            width: 30rem;
+            display: inline-block;
+            box-shadow: 1px 2px 15px -6px rgb(0 0 0 / 50%);
+            border-radius: 25px;
+            overflow: hidden;
+            margin-right: 4rem;
+            margin-bottom: 4rem;
+
+            @include atSmallMedium {
+                max-height: 30rem;
+                width: 60rem;
+            }
+
+            .image {
+                display: inline-block;
+                width: 100%;
+
+                .img {
+                    width: 100%;
+                }
+            }
+
+            &.has-image 
+            {
+
+
+            .entry {
+                vertical-align: top;
+                display: inline-block;
+                width: 300px;
+                font-size: 14px;
+                line-height: 18px;
+                padding: 20px;
+                @include atSmallMedium {
+                    margin-left: 2rem;
+                }
+
+                .content {
+                    margin-top: 20px;
+                    margin-top: 2rem;
+                    overflow-y: auto;
+                    max-height: 185px;
+                    max-height: 18.5rem;
+                    padding-right: 10px;
+                    padding-right: 1rem;
+                }
+
+                .details { 
+                
+                a {
+                    padding-left: 10px;
+                }
+
+                .user-icon {
+                    height: 3rem;
+                    width: 3rem;
+                    margin-right: 6px;
+                }
+            }
+
+            }
+            .entry,
+            .image {
+                display: inline-block;
+                width: 100%;
+
+                @include atSmallMedium {
+                    width: 28rem;
+                    max-height: 28rem;
+                }
+            }
+
+        }
+        }
+
+
+    }
+
+
+}

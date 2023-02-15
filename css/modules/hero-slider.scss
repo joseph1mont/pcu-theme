@@ -1,47 +1,17 @@
 .hero-slider {
-    position: relative;
-
-    div {
-        outline: none;
-        position: relative;
+    .title {
+        @include atMedium {
+            margin-bottom: 1rem;
+        }
     }
-
-    &__interior {
-        padding-top: 60px;
-        padding-bottom: 60px;
-
-        // @include atMedium {
-        //     padding-top: 130px;
-        //     padding-bottom: 130px;
-        // }
-    }
-
-    &__slide {
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    &__overlay {
-        margin: 0 auto;
-        background-color: rgba(0,0,0,0.68);
-        padding: 40px;
-        color: #fff;
-
-
-        width: 50%;
-        // @include stMedium {
-        //     width: 50%;
-        // }
+    .subtitle {
+        @include atMedium {
+            margin-bottom: 8rem;
+        }
     }
 }
 
-click-dots {
-    li {
-        list-style: none;
-        display: inline;
-    }
-
-    li button {
-        display: inline-block;
-    }
+.carousel-inner {
+    text-align: center;
+    color: #fff;
 }

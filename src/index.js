@@ -5,6 +5,7 @@ import "../css/style.scss";
 import HeroSlider from "./modules/HeroSlider";
 // import TinySlider from "./modules/TinySlider";
 import NavScroll from "./modules/NavScroll";
+import Counters from "./modules/Counters";
 
 
 // instantiate a new object using modules / classes
@@ -12,3 +13,4 @@ import NavScroll from "./modules/NavScroll";
 const heroSlider = new HeroSlider();
 // const tinySlider = new TinySlider();
 const navScroll = new NavScroll();
+const counters = new Counters();

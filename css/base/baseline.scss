@@ -15,35 +15,89 @@
       @content;
     }
   }
-  
+
+  @mixin atLarge {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @mixin atExtraLarge {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  html {
+    font-size: 6256.25%;  // 1rem = 9px;
+
+    @include atSmallMedium {
+      font-size: 62.6%;  // 1rem = 10px;
+    }
+  }
+
   body {
-    background-color: burlywood;
-    color: #333;
-    font-family: "Roboto", sans-serif;
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
     overflow-x: hidden;
     position: relative;
   }
   
+  img, video {
+    max-width: 100%;
+  }
+
   img {
     max-width: 100%;
-    height: auto;
+    // height: auto;
+    vertical-align: middle;
   }
   
   a {
     color: $mainBlue;
-  }
-  
-  a:hover {
     text-decoration: none;
   }
   
-  p,
+  a:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+
+  svg {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  
+  // Typography
+  h4 {
+    font-weight: 400 !important;
+  }
+  
+  h6 {
+    margin-top: 0;
+    font-weight: 700;
+  }
+  
+  h6, .h6 {
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+
+
+
+
+  // p,
   ul,
   ol {
     margin: 0 0 1.65em 0;
   }
   
-  p,
+  // p,
   li {
     line-height: 1.65;
   }
