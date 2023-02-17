@@ -16,8 +16,14 @@
     }
   }
 
-  @mixin atLarge {
+  @mixin atMediumLarge {
     @media (min-width: 1200px) {
+      @content;
+    }    
+  }
+
+  @mixin atLarge {
+    @media (min-width: 1400px) {
       @content;
     }
   }
@@ -29,7 +35,7 @@
   }
 
   html {
-    font-size: 6256.25%;  // 1rem = 9px;
+    font-size: 56.25%;  // 1rem = 9px;
 
     @include atSmallMedium {
       font-size: 62.6%;  // 1rem = 10px;
@@ -47,6 +53,10 @@
     position: relative;
   }
   
+  section {
+    display: block;
+  }
+
   img, video {
     max-width: 100%;
   }
@@ -73,10 +83,28 @@
   }
   
   // Typography
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+
   h4 {
     font-weight: 400 !important;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
-  
+
+  h5 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    // Page producres
+      font-size: 2.9rem;
+      text-align: center;
+  }
+
   h6 {
     margin-top: 0;
     font-weight: 700;
@@ -86,10 +114,6 @@
     margin-bottom: 0.5rem;
     line-height: 1.2;
   }
-
-
-
-
 
   // p,
   ul,

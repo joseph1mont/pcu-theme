@@ -94,6 +94,27 @@
             }
         }
     }
+}
 
+#footer-sub {
+    background-color: $mainBlack;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 4rem;
 
+    a {
+        color: #fff;
+    }
+
+    nav {
+        a.nav-link {
+        display: inline-block;
+        padding: 0;
+        }
+
+        a:after {
+            content: '|';
+            padding: 0 1 rem;
+        }
+    }
 }

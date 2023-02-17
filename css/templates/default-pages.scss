@@ -1,0 +1,9 @@
+.content-block {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include atSmallMedium {
+        margin-top: 4rem;
+        margin-bottom: 4rem;   
+    }
+}

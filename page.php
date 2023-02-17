@@ -7,10 +7,16 @@ while(have_posts()) {
 
 ?>
 
-<div class="container container--narrow page-section">
+<div class="container container--narrow page-section page-default">
+    <div class="row justify-content-center">
+        <div class="col-md col-md-10">
+            <div class="content-block container"></div>
 
-<h2>Page Content</h2>
+<?php the_content() ?>
 
+            </div>
+        </div>
+    </div>
 </div>
 <?php }
 

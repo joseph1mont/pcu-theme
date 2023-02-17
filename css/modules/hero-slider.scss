@@ -1,17 +1,31 @@
-.hero-slider {
-    .title {
-        @include atMedium {
-            margin-bottom: 1rem;
-        }
+.page-banner {
+    video {
+        position: absolute;
+        -o-object-fit: cover;
+        object-fit: cover;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
     }
-    .subtitle {
-        @include atMedium {
-            margin-bottom: 8rem;
-        }
-    }
-}
 
-.carousel-inner {
-    text-align: center;
-    color: #fff;
+    .hero-slider {
+        padding: 8rem 0;
+
+        .title {
+            @include atMedium {
+                margin-bottom: 1rem;
+            }
+        }
+        .subtitle {
+            @include atMedium {
+                margin-bottom: 8rem;
+            }
+        }
+    }
+
+    .carousel-inner {
+        text-align: center;
+        color: #fff;
+    }
 }

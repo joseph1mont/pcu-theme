@@ -1,5 +1,6 @@
 <?php
 
+// Page Banner for all pages (ACF) 
 function pageBanner($args = NULL) {
     
     if (!isset($args['title'])) {
@@ -17,15 +18,16 @@ function pageBanner($args = NULL) {
     ?>
     <div class="page-banner">
         <div class="page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>"></div>
-        <div class="page-banner__content container container--narrow">    
+        <div id="headline" class="page-banner__content container container--narrow">    
             <H1 class="page-banner__title"><?php echo $args['title'] ?></H1>
         </div>
     </div>
 <?php }
 
+
 function pcu_files() {
 
-    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto:wght@300&display=swap"');
     wp_enqueue_style('bootstrap4-style','//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
     wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.12.1/css/all.css');
 
@@ -34,9 +36,6 @@ function pcu_files() {
     wp_enqueue_script('bootstrap4-script','//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js');
 
     wp_enqueue_script('main-pcu-js', get_theme_file_uri('/build/index.js'), array('jquery'),'1.0.0', true);
-
-
-    wp_enqueue_script('tinyslider','//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', null, 1, true);
 
     wp_enqueue_style( 'pcu_main_styles', get_theme_file_uri( '/build/style-index.css' ) );
     wp_enqueue_style( 'pcu_extra_styles', get_theme_file_uri( '/build/index.css' ) );
@@ -47,7 +46,7 @@ add_action('wp_enqueue_scripts', 'pcu_files');
 
 
 function pcu_features() {
-    // Bootstarp responsive nav bar
+    // Bootstrap all nav bars
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
     register_nav_menu('headerMenuLocation', 'Header Menu Location');
     register_nav_menu('footerMenuLocation1', 'Footer Menu Location1');

@@ -27,47 +27,75 @@
                     </div>
                 </div>
             </div>
-    <div class="col-lg-2"></div>
-    <div class="col-11 col-lg-5">
-        <nav>
-            <ul class="nav nav-sitemap">
-                <li class="nav-item">
-                    <a class="nav-link top-level" href="#" targe="_self"><strong>Who We Are</strong></a>
-                        <?php
-                            wp_nav_menu(array(
-                                'menu'              => 'footer-menu1',
-                                'theme_location'    => 'footerMenuLocation1',
-                                'menu_class'        => 'nav flex-column'
-                            ));
-                        ?>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link top-level" href="#" targe="_self"><strong>Producers</strong></a>
-                    <?php
-                            wp_nav_menu(array(
-                                'menu'              => 'footer-menu2',
-                                'theme_location'    => 'footerMenuLocation2',
-                                'menu_class'        => 'nav flex-column'
-                            ));
-                        ?>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link top-level" href="#" targe="_self"><strong>Services</strong></a>
-                    <?php
-                            wp_nav_menu(array(
-                                'menu'              => 'footer-menu3',
-                                'theme_location'    => 'footerMenuLocation3',
-                                'menu_class'        => 'nav flex-column'
-                            ));
-                        ?>
-                </li>
-            </ul>
-        </nav>
-    </div>
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-11 col-lg-5">
+                <nav>
+                    <ul class="nav nav-sitemap">
+                        <li class="nav-item">
+                            <a class="nav-link top-level" href="#" targe="_self"><strong>Who We Are</strong></a>
+                                <?php
+                                    wp_nav_menu(array(
+                                        'menu'              => 'footer-menu1',
+                                        'theme_location'    => 'footerMenuLocation1',
+                                        'menu_class'        => 'nav flex-column'
+                                    ));
+                                ?>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-level" href="#" targe="_self"><strong>Producers</strong></a>
+                            <?php
+                                    wp_nav_menu(array(
+                                        'menu'              => 'footer-menu2',
+                                        'theme_location'    => 'footerMenuLocation2',
+                                        'menu_class'        => 'nav flex-column'
+                                    ));
+                                ?>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link top-level" href="#" targe="_self"><strong>Services</strong></a>
+                            <?php
+                                    wp_nav_menu(array(
+                                        'menu'              => 'footer-menu3',
+                                        'theme_location'    => 'footerMenuLocation3',
+                                        'menu_class'        => 'nav flex-column'
+                                    ));
+                                ?>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 
-
+    <div id="footer-sub">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg text-lg-left">
+                    <div class="content-block container">
+                        <div>Point Comfort is a registered trademark of Point Comfort </div> 
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <nav>
+                        <a class="nav-link" href="#" target="_self">
+                            GDPR
+                        </a>
+                        <a class="nav-link" href="#" target="_self">
+                            Terms of Use
+                        </a>
+                        <a class="nav-link" href="#" target="_self">
+                            Privacy Policy
+                        </a>
+                    </nav>
+                </div>
+                <div class="col-lg text-lg-right">
+                    <a href="#">Website Design</a>by .....
+                </div>
+            </div>
+        </div>
+    </div> 
 </footer>
 
 <?php wp_footer(); ?>
